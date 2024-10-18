@@ -18,4 +18,10 @@ class User {
             return false;
         }
     }
+
+    public static function getAllUsers($connection) {
+        $sql = "SELECT name FROM Usuario";
+
+        return $connection->query($sql);
+    }
 }
