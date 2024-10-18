@@ -20,8 +20,14 @@ class User {
     }
 
     public static function getAllUsers($connection) {
-        $sql = "SELECT name FROM Usuario";
+        $sql = "SELECT * FROM Usuario";
 
         return $connection->query($sql);
+    }
+
+    public static function deleteUser($connection,$id) {
+        $sql = "DELETE FROM Usuario where id = '$id'";
+
+        $connection->query($sql); 
     }
 }

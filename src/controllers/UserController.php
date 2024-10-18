@@ -36,4 +36,10 @@ class UserController {
 
         require_once BASE_PATH . '/views/showUsers.php';
     }
+
+    public function deleteUser($id) {
+        global $connection;
+
+        User::deleteUser($connection, $id);
+    }
 }
