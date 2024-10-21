@@ -41,5 +41,7 @@ class UserController {
         global $connection;
 
         User::deleteUser($connection, $id);
+
+        require_once BASE_PATH . '/views/deleteSuccess.php';
     }
 }
